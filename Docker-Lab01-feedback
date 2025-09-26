@@ -1,0 +1,31 @@
+Course Feedback – Zouaghi Med Aziz:
+WHAT I HAVE LEARNED :
+- Différences entre VM et containers.
+- Commandes Docker de base (`docker run`, `docker ps`, `docker exec`, etc.).
+- Concepts d’isolation et portabilité des conteneurs.
+- Que l’on peut exécuter Docker dans une VM.
+
+LAB ANSWERS :
+TP : Machines Virtuelles et Conteneurs
+1. Différence entre Machine Virtuelle et Conteneur
+Une machine virtuelle repose sur son propre système d’exploitation avec son noyau et ses
+services. Elle offre une isolation complète du matériel grâce aux hyperviseurs. En revanche, un
+conteneur partage le même noyau que l’hôte, tout en restant isolé au niveau des processus.
+2. Qu’est-ce qu’un conteneur ?
+Un conteneur est une abstraction d’application. Il encapsule une application dans une image
+exécutable garantissant portabilité et facilité d’exécution.
+3. Peut-on lancer des conteneurs dans une VM ?
+Oui, il est possible de lancer des conteneurs à l’intérieur d’une machine virtuelle. Il suffit d’installer
+Docker dans la VM et de déployer les conteneurs.
+4. Commande : docker container run alpine echo "hello from alpine"
+Cette commande exécute l’image Alpine, affiche « hello from alpine », puis le conteneur se ferme
+immédiatement.
+5. Commande : docker container run alpine /bin/sh
+Cette commande démarre un conteneur Alpine, exécute « /bin/sh », puis se termine aussitôt après
+l’exécution.
+6. Commande : docker container run -it alpine /bin/sh
+Les options -i (mode interactif) et -t (pseudo-TTY) permettent d’ouvrir un shell interactif. On peut y
+naviguer, créer des fichiers et exécuter des commandes. Le conteneur se ferme lorsque l’on quitte
+avec la commande « exit ».
+7. Commande : docker container ls -a
+Cette commande liste tous les conteneurs, qu’ils soient en cours d’exécution ou arrêtés.
